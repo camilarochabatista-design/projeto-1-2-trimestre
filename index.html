@@ -3,90 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Desapego</title>
+
+<title>Meu Desapego Fashion</title>
 
 <style>
+
 body{
-    margin:20px;
-    font-family: Georgia, serif;
-    background:#fff;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff5f8;
 }
 
-.topo{
+header{
     background:#ff1493;
     color:white;
     text-align:center;
     padding:35px;
 }
 
-.topo h1{
+header h1{
     margin:0;
     font-size:40px;
 }
 
-.topo p{
-    margin-top:10px;
+header p{
     font-size:18px;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
 }
 
 img{
     width:100%;
-    max-width:900px;
-    margin-top:20px;
+    border-radius:10px;
 }
 
 h2{
-    font-size:35px;
+    color:#ff1493;
 }
 
 .autor{
-    font-size:20px;
+    color:gray;
 }
 
-p{
-    font-size:22px;
+.botoes{
+    margin-top:30px;
 }
+
+button{
+    background:#ff1493;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    margin-right:10px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#d80b7f;
+}
+
+.contador{
+    font-weight:bold;
+    color:#ff1493;
+}
+
+footer{
+    background:#ff1493;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
 </style>
 
 </head>
+
 <body>
 
-<div class="topo">
-    <h1>Meu Desapego</h1>
-    <p>Roupas, acessórios e sapatos esperando um novo lar.</p>
-</div>
+<header>
 
-<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200" alt="Moda">
+<h1>Meu Desapego Fashion</h1>
+
+<p>Roupas • Acessórios • Sapatos</p>
+
+</header>
+
+<div class="container">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200" alt="Roupas">
 
 <h2>Meu primeiro desapego</h2>
 
-<p class="autor">Por: Camila Rocha Batista</p>
+<p class="autor">Por: Seu Nome</p>
 
 <p>
-Bem-vindo(a)! Aqui você encontrará roupas, bolsas, acessórios e sapatos em ótimo estado, com preços especiais.
-Todos os itens são cuidadosamente selecionados e atualizados frequentemente.
+
+Bem-vindo(a)!
+
+Aqui você encontrará roupas femininas, bolsas, acessórios e sapatos em ótimo estado e com preços especiais.
+
+Aproveite para renovar seu guarda-roupa de forma econômica e sustentável.
+
 </p>
 
-</body>
-</html>
+<div class="botoes">
+
+<button id="likeBtn">
+👍 Like
+</button>
+
+<span class="contador" id="likes">0</span>
+
+&nbsp;&nbsp;&nbsp;
+
+<button id="deslikeBtn">
+👎 Deslike
+</button>
+
+<span class="contador" id="deslikes">0</span>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2025 - Meu Desapego Fashion
+
+</footer>
+
 <script>
 
-let likes = Number(localStorage.getItem("likes")) || 0;
-let deslikes = Number(localStorage.getItem("deslikes")) || 0;
+let likes = parseInt(localStorage.getItem("likes")) || 0;
+let deslikes = parseInt(localStorage.getItem("deslikes")) || 0;
 
 document.getElementById("likes").textContent = likes;
 document.getElementById("deslikes").textContent = deslikes;
 
-document.getElementById("btnLike").onclick = function(){
-    likes++;
-    document.getElementById("likes").textContent = likes;
-    localStorage.setItem("likes", likes);
-}
+document.getElementById("likeBtn").addEventListener("click", function(){
 
-document.getElementById("btnDeslike").onclick = function(){
+    likes++;
+
+    document.getElementById("likes").textContent = likes;
+
+    localStorage.setItem("likes", likes);
+
+});
+
+document.getElementById("deslikeBtn").addEventListener("click", function(){
+
     deslikes++;
+
     document.getElementById("deslikes").textContent = deslikes;
+
     localStorage.setItem("deslikes", deslikes);
-}
+
+});
 
 </script>
+
+</body>
+</html>
