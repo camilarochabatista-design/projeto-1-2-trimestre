@@ -4,15 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Desapego Fashion</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Configurações Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f6f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container Principal */
+        .blog-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            border: 1px solid #e0dcd3;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Cabeçalho com cor voltada para Moda/Bazar */
+        .blog-header {
+            background-color: #4a5d4e; /* Tom verde oliva */
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .blog-header h1 {
+            margin: 10px 0 5px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .blog-header .subtitle {
+            font-size: 14px;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* Estilização do Texto Alternativo (Alt) */
+        .blog-logo {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto 15px auto;
+            color: #ffffff;
+            font-size: 12px;
+            font-style: italic;
+            line-height: 1.4;
+            text-align: left;
+            border: 1px dashed rgba(255, 255, 255, 0.5);
+            padding: 10px;
+        }
+
+        /* Área do Post */
+        .blog-post {
+            padding: 20px;
+            color: #333333;
+        }
+
+        .blog-post h2 {
+            font-size: 20px;
+            margin: 0 0 5px 0;
+        }
+
+        .blog-post .author {
+            font-size: 12px;
+            color: #777777;
+            margin: 0 0 15px 0;
+        }
+
+        .blog-post .content {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
     <div class="blog-container">
         <!-- Cabeçalho do Blog -->
         <header class="blog-header">
-            <!-- Simulação de imagem quebrada para mostrar o texto alt -->
-            <img src="logo_brecho_errado.png" alt="Logotipo conceitual de moda sustentável e brechó: um cabide elegante entrelaçado com folhas verdes, uma sacola de compras de papel kraft e um pequeno ícone de sapato de salto alto. Cores em tons de verde oliva e dourado." class="blog-logo">
+            <!-- src incorreto propositalmente para forçar a exibição do alt -->
+            <img src="foto_nao_existe.png" alt="Logotipo conceitual de moda sustentável e brechó: um cabide elegante entrelaçado com folhas verdes, uma sacola de compras de papel kraft e um pequeno ícone de sapato de salto alto. Cores em tons de verde oliva e dourado." class="blog-logo">
             <h1>Meu Desapego Fashion</h1>
             <p class="subtitle">Roupas, acessórios e calçados com história por um preço incrível</p>
         </header>
@@ -20,7 +96,7 @@
         <!-- Conteúdo do Post -->
         <article class="blog-post">
             <h2>Primeiro lote liberado!</h2>
-            <p class="author">Por: Marcelo Paludetto</p>
+            <p class="author">Por: Camila Rocha Batista</p>
             <p class="content">
                 Sejam bem-vindos ao meu bazar de desapegos! Acabei de postar as primeiras peças da semana. Tem jaquetas jeans, tênis casuais e bolsas vintage em perfeito estado. Confira os tamanhos e garanta a sua peça exclusiva antes que acabe!
             </p>
@@ -29,4 +105,3 @@
 
 </body>
 </html>
-
