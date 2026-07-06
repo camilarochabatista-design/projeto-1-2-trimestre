@@ -69,8 +69,24 @@ Todos os itens são cuidadosamente selecionados e atualizados frequentemente.
 
 </body>
 </html>
-<div class="avaliacao">
-    <button onclick="like()">👍 Like <span id="likes">0</span></button>
+<script>
 
-    <button onclick="deslike()">👎 Deslike <span id="deslikes">0</span></button>
-</div>
+let likes = Number(localStorage.getItem("likes")) || 0;
+let deslikes = Number(localStorage.getItem("deslikes")) || 0;
+
+document.getElementById("likes").textContent = likes;
+document.getElementById("deslikes").textContent = deslikes;
+
+document.getElementById("btnLike").onclick = function(){
+    likes++;
+    document.getElementById("likes").textContent = likes;
+    localStorage.setItem("likes", likes);
+}
+
+document.getElementById("btnDeslike").onclick = function(){
+    deslikes++;
+    document.getElementById("deslikes").textContent = deslikes;
+    localStorage.setItem("deslikes", deslikes);
+}
+
+</script>
