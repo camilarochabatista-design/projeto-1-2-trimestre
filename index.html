@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -44,18 +44,15 @@
             opacity: 0.9;
         }
 
-        /* Estilização do Texto Alternativo (Alt) */
+        /* Estilização da Imagem do Logo */
         .blog-logo {
             display: block;
-            max-width: 100%;
+            width: 120px; /* Definido um tamanho fixo adequado para um logotipo */
+            height: 120px;
+            object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+            border-radius: 50%; /* Deixa a logo redonda e estilizada */
             margin: 0 auto 15px auto;
-            color: #ffffff;
-            font-size: 12px;
-            font-style: italic;
-            line-height: 1.4;
-            text-align: left;
-            border: 1px dashed rgba(255, 255, 255, 0.5);
-            padding: 10px;
+            border: 3px solid #ffffff; /* Borda branca charmosa ao redor da logo */
         }
 
         /* Área do Post */
@@ -84,16 +81,13 @@
 </head>
 <body>
 
-    <div class="blog-container">
-        <!-- Cabeçalho do Blog -->
+    <main class="blog-container">
         <header class="blog-header">
-            <!-- src incorreto propositalmente para forçar a exibição do alt -->
-            <img src="foto_nao_existe.png" alt="Logotipo conceitual de moda sustentável e brechó: um cabide elegante entrelaçado com folhas verdes, uma sacola de compras de papel kraft e um pequeno ícone de sapato de salto alto. Cores em tons de verde oliva e dourado." class="blog-logo">
+            <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&q=80&w=400" alt="Logotipo conceitual de moda sustentável e brechó: um cabide elegante entrelaçado com folhas verdes, uma sacola de compras de papel kraft e um pequeno ícone de sapato de salto alto. Cores em tons de verde oliva e dourado." class="blog-logo">
             <h1>Meu Desapego Fashion</h1>
             <p class="subtitle">Roupas, acessórios e calçados com história por um preço incrível</p>
         </header>
 
-        <!-- Conteúdo do Post -->
         <article class="blog-post">
             <h2>Primeiro lote liberado!</h2>
             <p class="author">Por: Camila Rocha Batista</p>
@@ -101,7 +95,7 @@
                 Sejam bem-vindos ao meu bazar de desapegos! Acabei de postar as primeiras peças da semana. Tem jaquetas jeans, tênis casuais e bolsas vintage em perfeito estado. Confira os tamanhos e garanta a sua peça exclusiva antes que acabe!
             </p>
         </article>
-    </div>
+    </main>
 
 </body>
 </html>
